@@ -599,28 +599,7 @@ nav ul .nav-info-item a:hover:before {
     background: var(--text);
     border-radius: 999px;
 }
-    margin-top: 0.3em;
-}
 
-.skill-bar span {
-    display: block;
-    height: 100%;
-    background: var(--accent);
-    border-radius: 999px;
-}
-
-.skills-info-item:nth-child(4) .skill-bar span,
-.skills-info-item:nth-child(5) .skill-bar span {
-    background: #22C55E;
-}
-
-/* section portfolio */
-.portfolio {
-    width: 100%;
-    margin-top: 3.5em;
-}
-
-.portfolio .portfolio-header {
 /* section portfolio — 1 featured + list */
 .portfolio {
     width: 100%;
@@ -745,15 +724,18 @@ nav ul .nav-info-item a:hover:before {
 /* Section certificate — strip horizontal */
 .certificate {
     width: 100%;
+    max-width: 100%;
     margin-top: 4em;
     margin-bottom: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .certificate .certificate-info {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
+    max-width: 100%;
     padding-bottom: 0.8em;
     scroll-snap-type: x mandatory;
 }
