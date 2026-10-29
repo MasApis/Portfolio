@@ -846,8 +846,8 @@ nav ul .nav-info-item a:hover:before {
 
 .contact .contact-info {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: flex-start;
 }
 
 .contact-info form {
@@ -861,6 +861,7 @@ nav ul .nav-info-item a:hover:before {
     justify-content: center;
     width: 100%;
     max-width: 560px;
+    margin: 0;
     text-align: left;
 }
 
