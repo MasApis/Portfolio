@@ -1,14 +1,17 @@
 :root {
     --bg: #FAFAF9;
     --surface: #FFFFFF;
-    --surface-dark: #121212;
-    --nav-bg: rgba(250, 250, 249, 0.9);
     --text: #121212;
-    --muted: #6B7280;
+    --muted: #5B6470;
     --border: #E7E5E4;
-    --accent: #121212;
+    --accent: #30AFFF;
+    --accent-hover: #0E9CE8;
+    --accent-soft: #92EEFF;
+    --mint: #D8FFC5;
+    --mint-soft: #C4F7CA;
     --radius: 16px;
     --max-width: 1080px;
+    --nav-bg: rgba(250, 250, 249, 0.9);
 }
 
 * {
@@ -149,12 +152,18 @@ nav ul .nav-info-item a:hover:before {
 }
 
 .introduce-header-one .header-eyebrow {
-    font-size: 0.9em;
-    font-weight: 600;
-    color: var(--muted);
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.78em;
+    font-weight: 700;
+    color: var(--text);
+    background: var(--mint);
+    border: 1px solid var(--mint-soft);
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.9em;
+    padding: 0.4em 0.9em;
+    border-radius: 999px;
 }
 
 .introduce-header-one .header-big {
@@ -194,14 +203,15 @@ nav ul .nav-info-item a:hover:before {
     font-size: 0.92em;
     padding: 0.8em 1.6em;
     text-align: center;
-    font-weight: 600;
-    transition: opacity 0.25s ease, transform 0.25s ease;
+    font-weight: 700;
+    transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .introduce-header-one .button-github:hover {
-    opacity: 0.85;
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
     transform: translateY(-1px);
-    background-color: var(--accent);
+    opacity: 1;
     color: #fff;
 }
 
@@ -242,54 +252,97 @@ nav ul .nav-info-item a:hover:before {
 
 /* Bagian section about me */
 .container .about {
-   /* border: 1px solid white; */
-   width: 90%;
-   margin-top: 10em;
-   /* margin-bottom: 18em; */
+   width: 100%;
+   margin-top: 3.5em;
    display: flex;
-   align-items: center;
+   align-items: stretch;
+   gap: 2rem;
+   background: var(--surface);
+   border: 1px solid var(--border);
+   border-radius: var(--radius);
+   padding: 2rem;
 }
 
 .about .section-about-image {
-    padding: 5px 5px 5px 5px;
     display: flex;
     align-items: center;
-    border-radius: 10px;
-    flex: 2;
-    margin-right: 3em;
-    background-color: white;
+    border-radius: 12px;
+    flex: 1;
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    padding: 8px;
 }
 
 .about .section-about-image img {
-    border-radius: 10px;
+    border-radius: 8px;
     width: 100%;
-    max-height: 470px;
+    max-height: 420px;
     object-fit: cover;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .about .section-about-info {
-    flex: 3;
+    flex: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-eyebrow {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.35em 0.85em;
+    border-radius: 999px;
+    margin-bottom: 0.9em;
 }
 
 .about .section-about-info .about-header {
-    font-size: 5.5em;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 0.6em;
 }
 
 .section-about-info .about-text {
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 400;
+    color: var(--muted);
 }
 
-.section-about-info .about-text2 {
-    font-size: 1.1em;
-    font-weight: 400;
-    margin-top: 1em;
+.section-about-info .about-text + .about-text {
+    margin-top: 0.9em;
 }
 
-.section-about-mobile {
-    display: none;
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6em;
+    margin-top: 1.4em;
+}
+
+.about-tags li {
+    font-size: 0.82em;
+    font-weight: 600;
+    padding: 0.45em 0.95em;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.about-tags li:first-child {
+    background: var(--mint);
+    border-color: var(--mint-soft);
+}
+
+.about-tags li:nth-child(2) {
+    background: var(--accent-soft);
 }
 
 /* Section education */
@@ -813,44 +866,19 @@ footer .footer-bottom {
     }
 
     /* section about */
-    .about {
+    .container .about {
         flex-direction: column;
+        padding: 1.25rem;
+        gap: 1.25rem;
     }
 
     .about .section-about-image {
        width: 100%;
-       margin-left: 2.9em;
     }
 
     .section-about-image img {
         width: 100%;
-        height: 330px;
-    }
-
-    .about .section-about-info {
-        display: none;
-    }
-
-    .section-about-mobile {
-        display: block;
-    }
-
-    .section-about-mobile .about-header-mobile {
-        font-size: 2.7em;
-        font-weight: 700;
-    }
-
-    .section-about-mobile .about-text-mobile {
-        font-size: 1.1em;
-        font-weight: 300;
-        line-height: 1.5;
-    }
-
-    .section-about-mobile .about-text2-mobile {
-        font-size: 1.1em;
-        font-weight: 300;
-        line-height: 1.5;
-        margin-top: 0.5em;
+        max-height: 330px;
     }
 
     /* section education */
