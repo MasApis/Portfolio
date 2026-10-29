@@ -845,9 +845,61 @@ nav ul .nav-info-item a:hover:before {
 }
 
 .contact .contact-info {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.contact-side {
+    padding-top: 0.2em;
+    font-size: 0.92em;
+    color: var(--muted);
+}
+
+.contact-side-status {
     display: flex;
-    align-items: stretch;
-    justify-content: flex-start;
+    align-items: center;
+    gap: 0.55em;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 1.1em;
+}
+
+.contact-side-list {
+    list-style: none;
+    margin: 0 0 1.1em;
+    padding: 0;
+    border-top: 1px solid var(--border);
+}
+
+.contact-side-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15em;
+    padding: 0.75em 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-side-list li span {
+    font-size: 0.78em;
+    font-weight: 600;
+}
+
+.contact-side-list a {
+    color: var(--link);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+}
+
+.contact-side-list a:hover {
+    color: var(--link-hover);
+}
+
+.contact-side-note {
+    font-size: 0.88em;
+    line-height: 1.7;
 }
 
 .contact-info form {
@@ -1186,6 +1238,11 @@ footer .footer-bottom {
     /* section contact */
     .contact-info form {
         padding: 1.1em;
+    }
+
+    .contact .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
 }
