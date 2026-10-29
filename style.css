@@ -781,12 +781,22 @@ nav ul .nav-info-item a:hover:before {
 
 /* section contact */
 .container .contact {
-    width: 90%;
-    /* border: 1px solid white;*/
-    margin-bottom: 1em;
-    /* background-color: #ffff; */
-    border-radius: 1.2em;
-    padding: 0.4em 0 0.4em 0;
+    width: 100%;
+    margin: 3.5em 0 1em;
+    padding: 0;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+}
+
+.contact-desc {
+    color: var(--muted);
+    margin: 0.6em auto 1.4em;
+    max-width: 36rem;
 }
 
 .contact .contact-info {
@@ -798,122 +808,152 @@ nav ul .nav-info-item a:hover:before {
 .contact-info form {
     display: flex;
     flex-direction: column;
-    gap: 1.7em;
-    padding: 2em;
-    border-radius: 2em;
-    background-color: rgb(30, 29, 29);
+    gap: 1.1em;
+    padding: 1.8em;
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
     justify-content: center;
+    width: 100%;
+    max-width: 560px;
+    text-align: left;
 }
 
-form .form-header {
-    text-align: center;
-    font-size: 1.5em;
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45em;
+}
+
+.form-field label {
+    font-size: 0.82em;
     font-weight: 700;
+    letter-spacing: 0.04em;
 }
 
 form .contact-inputs {
-    max-width: 410px;
-    padding-left: 1em;
-    font-weight: 600;
-    height: 50px;
-    border: none;
+    width: 100%;
+    padding: 0.85em 1em;
+    font-weight: 500;
+    font-size: 0.95em;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
     outline: none;
-    border-radius: 1.7em;
+    border-radius: 12px;
+    transition: border-color 0.2s ease;
+}
+
+form .contact-inputs:focus,
+textarea:focus {
+    border-color: var(--accent);
+    background: #fff;
 }
 
 textarea {
-    height: 140px;
-    width: 410px;
-    font-weight: 600;
-    border: none;
+    min-height: 140px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 0.95em;
+    font-family: inherit;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
     outline: none;
-    padding-left: 1em;
-    border-radius: 1.7em;
-    padding-top: 1em;
+    border-radius: 12px;
+    padding: 0.85em 1em;
+    resize: vertical;
+    transition: border-color 0.2s ease;
 }
 
 form .submit {
-    width: 200px;
-    margin: 0 auto;
+    width: 100%;
     font-weight: 700;
-    font-size: 1.3em;
-    border-radius: 1.5em;
-    border: none;
+    font-size: 1em;
+    border-radius: 999px;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
     cursor: pointer;
-    padding: 0.2em 0 0.2em 0;
+    padding: 0.85em;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+form .submit:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    transform: translateY(-1px);
 }
 
 /* Footer */
 footer {
     width: 100%;
-    background-color: rgb(30, 29, 29);
-    /* display: flex;
-    gap: 1em; */
-    /* padding: 1.2em; */
+    background-color: #121212;
+    color: #EDEDEC;
+    margin-top: 3.5em;
 }
 
 .footer-info {
-    display: flex;
-    gap: 1em;
-    padding: 1.2em;
-}
-
-.footer-info .about-footer, .contact-footer {
-    flex: 2;
-}
-
-.footer-info .quick-link-footer {
-    flex: 1;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2.5em 1.5rem;
 }
 
 .footer-info .about-footer {
-    padding: 1.2em;
+    padding: 0;
 }
 
 .about-footer h2 {
-    font-size: 2em;
-    margin-bottom: 0.4em;
+    font-size: 1.2em;
+    margin-bottom: 0.6em;
+    letter-spacing: -0.01em;
 }
 
 .about-footer p {
-    font-size: 0.9em;
+    font-size: 0.92em;
     font-weight: 400;
+    color: #A1A1AA;
 }
 
 .about-footer .link-sosmed {
-    margin-top: 1em;
+    margin-top: 1.1em;
     display: flex;
-    gap: 1em;
+    gap: 0.7em;
 }
 
-.link-sosmed-item i {
-    border: 1px solid white;
+.link-sosmed-item {
+    border: 1px solid #2A2A2A;
     display: flex;
     align-items: center;
-    font-size: 2em;
-    color: white;
+    background: transparent;
+    font-size: 1.2em;
+    color: #EDEDEC;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    font-weight: 600;
-    transition: all 0.5s ease-in-out;
-}
-
-.link-sosmed-item i:hover {
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     font-weight: 600;
-    background-color: white;
-    color: black;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.link-sosmed-item:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 .footer-info .quick-link-footer {
     display: flex;
     flex-direction: column;
-    padding: 1.2em;
+    padding: 0;
 }
 
 .quick-link-footer h2 {
-    font-size: 1.5em;
+    font-size: 1em;
     margin-bottom: 0.8em;
 }
 
@@ -922,22 +962,27 @@ footer {
 }
 
 .quick-link-footer .quick-link-info-item a {
-    color: white;
-    margin-bottom: 0.2em;
+    color: #A1A1AA;
+    margin-bottom: 0.35em;
     display: inline-block;
-    font-size: 1em;
+    font-size: 0.92em;
     position: relative;
     overflow: hidden;
+    transition: color 0.2s ease;
+}
+
+.quick-link-footer .quick-link-info-item a:hover {
+    color: #fff;
 }
 
 .quick-link-footer .quick-link-info-item a::before {
     position: absolute;
     content: '';
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--accent);
     width: 100%;
     bottom: 0;
     transform: translateX(-102%);
-    transition: all 0.5s linear;
+    transition: transform 0.3s ease;
 }
 
 .quick-link-footer .quick-link-info-item a:hover:before {
@@ -945,31 +990,40 @@ footer {
 }
 
 .footer-info .contact-footer {
-    padding: 1.2em;
+    padding: 0;
 }
 
 .contact-footer h2 {
     margin-bottom: 0.8em;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .contact-footer .contact-footer-item {
     display: flex;
-    align-items: center;
-    margin-bottom: 1.3em;
-    /* border: 1px solid white; */
+    align-items: flex-start;
+    margin-bottom: 0.9em;
+    color: #A1A1AA;
+    font-size: 0.9em;
 }
 
 .contact-footer-item i {
-    margin-right: 0.8em;
-    font-size: 2em;
+    margin-right: 0.7em;
+    font-size: 1.3em;
+    color: var(--accent-soft);
+}
+
+.contact-footer-item address {
+    font-style: normal;
 }
 
 footer .footer-bottom {
-    background-color: rgb(66, 63, 63);
+    background-color: #0A0A0A;
+    border-top: 1px solid #2A2A2A;
     width: 100%;
-    padding: 1.7em;
+    padding: 1.2em;
     text-align: center;
+    font-size: 0.82em;
+    color: #A1A1AA;
 }
 
 @media only screen and (max-width: 900px) {
@@ -1002,29 +1056,16 @@ footer .footer-bottom {
 
     /* responsive section footer */
     footer .footer-info {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
 @media only screen and (max-width: 560px) {
 
-    /* responsive section form */
-    form {
-        padding: 1em;
-    }
-
-    form .form-header {
-        font-size: 1.2em;
-    }
-
-    form .contact-inputs {
-        max-width: 310px;
-        height: 40px;
-    }
-
-    form textarea {
-        width: 310px;
-        height: 120px;
+    /* responsive section contact */
+    .contact-info form {
+        padding: 1.25em;
     }
 
     /* responsive section certificate */
@@ -1093,37 +1134,14 @@ footer .footer-bottom {
     }
 
     /* section contact */
-    form {
-        padding: 0.8em;
+    .contact-info form {
+        padding: 1.1em;
     }
 
-    form .contact-inputs {
-        width: 270px;
-        /* max-width: 299px; */
-        height: 35px;
-    }
-
-    form textarea {
-        width: 270px;
-        height: 115px;
-    }
-    
 }
 
 @media only screen and (max-width: 350px) {
-    form {
-        padding: 0.8em;
+    .contact-info form {
+        padding: 1em;
     }
-
-    form .contact-inputs {
-        width: 100%;
-        /* max-width: 299px; */
-        height: 35px;
-    }
-
-    form textarea {
-        width: 100%;
-        height: 115px;
-    }
-}
 }

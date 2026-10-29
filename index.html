@@ -252,17 +252,26 @@
             </div>
         </section>
         <section class="contact" id="contact">
+            <p class="section-eyebrow section-eyebrow-centered">Kontak</p>
+            <h2 class="contact-title">Hubungi saya</h2>
+            <p class="contact-desc">Punya project, magang, atau sekadar diskusi web? Kirim pesan lewat form ini.</p>
             <div class="contact-info">
                 <form action="https://api.web3forms.com/submit" method="POST">
-                    <div class="form-header">
-                        <h2>Contact me</h2>
-                    </div>
                     <!-- TODO: ganti dengan access key baru dari web3forms.com — key lama terekspos di git history, segera revoke -->
                     <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-                    <input type="text" name="name" placeholder="Your name" class="contact-inputs" required>
-                    <input type="email" name="email" placeholder="Your email" class="contact-inputs" required>
-                    <textarea name="message" placeholder="Your message" required></textarea>
-                    <button type="submit" class="submit">Send</button>
+                    <div class="form-field">
+                        <label for="contact-name">Nama</label>
+                        <input id="contact-name" type="text" name="name" placeholder="Nama kamu" class="contact-inputs" required autocomplete="name">
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-email">Email</label>
+                        <input id="contact-email" type="email" name="email" placeholder="nama@email.com" class="contact-inputs" required autocomplete="email">
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-message">Pesan</label>
+                        <textarea id="contact-message" name="message" placeholder="Tulis pesan kamu..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit">Kirim pesan</button>
                 </form>
             </div>
         </section>
@@ -270,19 +279,19 @@
     <footer>
         <div class="footer-info">
             <div class="about-footer">
-                <h2>About</h2>
+                <h2>MasApisTech</h2>
                 <p>
-                    Saya bagus dalam belajar hal baru, dan saya sangat menyukai teknologi apa pun itu. Saat ini saya sedang fokus belajar pengembangan web......
+                    Junior Web Developer. Fokus belajar web programming — HTML, CSS, dan JavaScript.
                 </p>
                 <ul class="link-sosmed">
-                    <a href="https://www.instagram.com/masapistech/" target="_blank" class="link-sosmed-item" rel="noopener noreferrer"><i class="ph ph-instagram-logo"></i></a>
-                    <a href="https://www.facebook.com/abdul.hafidz.1460693" target="_blank" class="link-sosmed-item" rel="noopener noreferrer"><i class="ph ph-facebook-logo"></i></a>
-                    <a href="https://www.linkedin.com/in/abdul-hafidz-198a66304/" target="_blank" class="link-sosmed-item" rel="noopener noreferrer"><i class="ph ph-linkedin-logo"></i></a>
-                    <a href="https://github.com/MasApis" target="_blank" class="link-sosmed-item" rel="noopener noreferrer"><i class="ph ph-github-logo"></i></a>
+                    <li><a href="https://www.instagram.com/masapistech/" target="_blank" class="link-sosmed-item" rel="noopener noreferrer" aria-label="Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/abdul.hafidz.1460693" target="_blank" class="link-sosmed-item" rel="noopener noreferrer" aria-label="Facebook"><i class="ph ph-facebook-logo" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/abdul-hafidz-198a66304/" target="_blank" class="link-sosmed-item" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/MasApis" target="_blank" class="link-sosmed-item" rel="noopener noreferrer" aria-label="GitHub"><i class="ph ph-github-logo" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
             <div class="quick-link-footer">
-                <h2>Quick link</h2>
+                <h2>Navigasi</h2>
                 <ul class="quick-link-info">
                     <li class="quick-link-info-item"><a href="#introduce-header">Home</a></li>
                     <li class="quick-link-info-item"><a href="#about">About</a></li>
@@ -294,23 +303,23 @@
                 </ul>
             </div>
             <div class="contact-footer">
-                <h2>Contact</h2>
+                <h2>Kontak</h2>
                 <div class="contact-footer-item">
-                    <i class="ph ph-map-pin"></i>
-                    <address class="address">kp. Sidomulyo Km 18 Kijang, Kelurahan Sei Lekop, Kecamatan Bintan Timur, Kabupaten Bintan, Provinsi Kepulauan Riau, Indonesia</address>
+                    <i class="ph ph-map-pin" aria-hidden="true"></i>
+                    <address class="address">Bintan Timur, Kepulauan Riau, Indonesia</address>
                 </div>
                 <div class="contact-footer-item">
-                    <i class="ph ph-envelope"></i>
+                    <i class="ph ph-envelope" aria-hidden="true"></i>
                     <span class="email">abddulhafidz3105@gmail.com</span>
                 </div>
                 <div class="contact-footer-item">
-                    <i class="ph ph-phone"></i>
+                    <i class="ph ph-phone" aria-hidden="true"></i>
                     <span class="phone-number">083146949357</span>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>©COPYRIGHT 2026 MASAPISTECH ALL RIGHTS RESERVED</p>
+            <p>© <span id="year">2026</span> MasApisTech. All rights reserved.</p>
         </div>
     </footer>
     <script src="script.js"></script>
