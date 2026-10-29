@@ -6,12 +6,39 @@
     --border: #E7E5E4;
     --accent: #30AFFF;
     --accent-hover: #0E9CE8;
+    --link: #0B6FA4;
+    --link-hover: #084E73;
     --accent-soft: #92EEFF;
     --mint: #D8FFC5;
     --mint-soft: #C4F7CA;
     --radius: 16px;
     --max-width: 1080px;
     --nav-bg: rgba(250, 250, 249, 0.9);
+}
+
+:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -60px;
+    background: #121212;
+    color: #fff;
+    padding: 0.7em 1.1em;
+    border-radius: 999px;
+    font-size: 0.88em;
+    font-weight: 700;
+    z-index: 200;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 12px;
+    color: #fff;
 }
 
 * {
@@ -364,31 +391,6 @@ nav ul .nav-info-item a:hover:before {
     margin-top: 0.9em;
 }
 
-.about-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6em;
-    margin-top: 1.4em;
-}
-
-.about-tags li {
-    font-size: 0.82em;
-    font-weight: 600;
-    padding: 0.45em 0.95em;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    background: var(--bg);
-}
-
-.about-tags li:first-child {
-    background: var(--mint);
-    border-color: var(--mint-soft);
-}
-
-.about-tags li:nth-child(2) {
-    background: var(--accent-soft);
-}
-
 /* Section education — timeline rute */
 .education {
     width: 100%;
@@ -482,7 +484,7 @@ nav ul .nav-info-item a:hover:before {
 .education-year-now {
     background: none !important;
     border: none !important;
-    color: var(--accent-hover) !important;
+    color: var(--link) !important;
     font-weight: 700;
 }
 
@@ -496,9 +498,13 @@ nav ul .nav-info-item a:hover:before {
 }
 
 .education-school .education-text a {
-    color: var(--accent-hover);
+    color: var(--link);
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+.education-school .education-text a:hover {
+    color: var(--link-hover);
 }
 
 .education-school .button {
@@ -708,9 +714,32 @@ nav ul .nav-info-item a:hover:before {
 .button-portfolio a:hover {
     background: none;
     border: none;
-    color: var(--accent-hover);
+    color: var(--link-hover);
     transform: none;
-    text-decoration-color: var(--accent-hover);
+    text-decoration-color: var(--link-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .portfolio-info .portfolio-info-item:hover,
+    .education-info .education-school:hover,
+    .skills-info .skills-info-item:hover,
+    .certificate-info .certificate-info-item:hover,
+    .introduce-header-one .button-github:hover,
+    form .submit:hover {
+        transform: none;
+    }
 }
 
 /* Section certificate — strip horizontal */
@@ -970,10 +999,6 @@ footer {
 .quick-link-footer h2 {
     font-size: 1em;
     margin-bottom: 0.8em;
-}
-
-.quick-link-footer-info {
-    display: flex;
 }
 
 .quick-link-footer .quick-link-info-item a {
