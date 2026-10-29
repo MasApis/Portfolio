@@ -696,37 +696,85 @@ nav ul .nav-info-item a:hover:before {
 
 /* Section certificate */
 .certificate {
-    width: 98%;
-    margin-top: 8em;
-    margin-bottom: 3em;
-    padding: 1em;
+    width: 100%;
+    margin-top: 3.5em;
+    margin-bottom: 0;
+    padding: 0;
 }
 
 .certificate .certificate-header {
-    font-size: 3em;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     text-align: center;
+    letter-spacing: -0.02em;
     font-weight: 700;
-    margin-bottom: 0.7em;
+    margin-bottom: 1.2em;
 }
 
 .certificate .certificate-info {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
 }
 
 .certificate-info .certificate-info-item {
-    background-color: #ffff;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
     display: flex;
-    padding: 0.5em;
-    border-radius: 1.3em;
+    flex-direction: column;
+    margin: 0;
+    padding: 0.6em;
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.certificate-info .certificate-info-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(18, 18, 18, 0.08);
 }
 
 .certificate-info-item img {
-    max-width: 350px;
-    height: 250px;
-    border-radius: 1em;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.certificate-info-item figcaption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6em;
+    padding: 0.8em 0.4em 0.4em;
+}
+
+.certificate-info-item figcaption strong {
+    font-size: 0.92em;
+}
+
+.certificate-info-item figcaption span {
+    font-size: 0.72em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 0.3em 0.75em;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.certificate-info-item:nth-child(odd) figcaption span {
+    background: var(--mint);
+    border-color: var(--mint-soft);
+    color: var(--text);
+}
+
+.certificate-info-item:nth-child(even) figcaption span {
+    background: var(--accent-soft);
+    border-color: var(--border);
+    color: var(--text);
 }
 
 /* section contact */
