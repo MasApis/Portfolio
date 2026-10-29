@@ -600,7 +600,7 @@ nav ul .nav-info-item a:hover:before {
     border-radius: 999px;
 }
 
-/* section portfolio — 1 featured + list */
+/* section portfolio — arsip bernomor */
 .portfolio {
     width: 100%;
     margin-top: 4em;
@@ -611,6 +611,9 @@ nav ul .nav-info-item a:hover:before {
     flex-direction: column;
     gap: 0;
     border-top: 1px solid var(--border);
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .portfolio-info .portfolio-info-item {
@@ -620,7 +623,10 @@ nav ul .nav-info-item a:hover:before {
     border: none;
     border-bottom: 1px solid var(--border);
     border-radius: 0;
-    display: block;
+    display: grid;
+    grid-template-columns: 56px 180px 1fr;
+    gap: 1.2rem;
+    align-items: start;
 }
 
 .portfolio-info .portfolio-info-item:hover {
@@ -628,37 +634,50 @@ nav ul .nav-info-item a:hover:before {
     box-shadow: none;
 }
 
-.portfolio-info-item img {
-    display: none;
+.portfolio-index {
+    font-size: 1.4em;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    line-height: 1.2;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.portfolio-featured img {
+.portfolio-info-item:hover .portfolio-index {
+    transform: translateX(2px);
+    color: var(--link);
+}
+
+.portfolio-info-item img {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 8;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
-    border-radius: var(--radius);
+    border-radius: 10px;
     border: 1px solid var(--border);
-    margin-bottom: 1.1em;
+    background: var(--bg);
+}
+
+.portfolio-meta {
+    font-size: 0.78em;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.01em;
 }
 
 .portfolio-body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.4em;
+    gap: 0.35em;
     flex: 1;
     max-width: 44rem;
 }
 
 .portfolio-body h3 {
-    font-size: 1.15em;
+    font-size: 1.25em;
     letter-spacing: -0.02em;
     font-weight: 800;
-}
-
-.portfolio-featured .portfolio-body h3 {
-    font-size: 1.5em;
 }
 
 .portfolio-info-item .portfolio-info-text {
@@ -1142,9 +1161,10 @@ footer .footer-bottom {
         margin-left: 6px;
     }
 
-    /* section portfolio: featured stacks, list stays */
-    .portfolio-featured img {
-        aspect-ratio: 16 / 10;
+    /* section portfolio: arsip menumpuk rapi */
+    .portfolio-info .portfolio-info-item {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
     }
 
     /* section certificate: strip scrolls natively */
