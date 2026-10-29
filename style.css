@@ -1,16 +1,29 @@
-/* Google font poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --bg: #FAFAF9;
+    --surface: #FFFFFF;
+    --surface-dark: #121212;
+    --nav-bg: rgba(250, 250, 249, 0.9);
+    --text: #121212;
+    --muted: #6B7280;
+    --border: #E7E5E4;
+    --accent: #121212;
+    --radius: 16px;
+    --max-width: 1080px;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
-    animation-timeline: scroll();
+}
+
+section[id] {
+    scroll-margin-top: 90px;
 }
 
 ul {
@@ -23,8 +36,10 @@ a {
 
 body {
     min-height: 100vh;
-    background-color: black;
-    color: #ffff;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Bagian navigation */
@@ -32,26 +47,38 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: rgb(30, 29, 29);
-    color: white;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--text);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.4em;
-    opacity: 10;
+    padding: 1rem 1.4em;
+    border-bottom: 1px solid var(--border);
+    opacity: 1;
     z-index: 100;
 }
 
 nav .nav-header {
-    font-size: 1.5em;
+    font-size: 1.15em;
     font-weight: 700;
-    text-transform: uppercase;
+    letter-spacing: -0.02em;
     margin-left: 1.2em;
 }
 
 nav .menu-icon {
     display: none;
-    font-size: 2em;
+    font-size: 1.6em;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text);
 }
 
 nav ul {
@@ -66,24 +93,28 @@ nav ul {
 } */
 
 nav ul .nav-info-item a {
-    font-size: 1.1em;
+    font-size: 0.95em;
     position: relative;
     display: inline-block;
-    color: white;
+    color: var(--muted);
     font-weight: 500;
     text-decoration: none;
     overflow: hidden;
-    /* text-transform: uppercase; */
+    transition: color 0.25s ease;
+}
+
+nav ul .nav-info-item a:hover {
+    color: var(--text);
 }
 
 nav ul .nav-info-item a::before {
     position: absolute;
     content: '';
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--text);
     width: 100%;
     bottom: 0;
     transform: translateX(-102%);
-    transition: all 0.5s linear;
+    transition: transform 0.3s ease;
 }
 
 nav ul .nav-info-item a:hover:before {
@@ -91,70 +122,114 @@ nav ul .nav-info-item a:hover:before {
 }
 
 .container {
-    /* min-height: 100vh; */
     width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    padding: 0 1.5rem;
 }
 
 /* Bagian section header */
 .container .introduce-header {
-    /* border: 1px solid white; */
     display: flex;
-    margin-top: 5em;
-    width: 90%;
+    margin-top: 4.5em;
+    margin-bottom: 2em;
+    width: 100%;
     align-items: center;
-    /* border: 1px solid white; */
+    gap: 3rem;
 }
 
 .introduce-header-one {
     display: flex;
-    flex: 2;
+    flex: 1.4;
     flex-direction: column;
 }
 
-.introduce-header-one .header-small {
-    font-size: 2.2em;
+.introduce-header-one .header-eyebrow {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.6em;
 }
 
 .introduce-header-one .header-big {
-    font-size: 2.8em;
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
     font-weight: 700;
-    margin-bottom: 0.2em;
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+    margin-bottom: 0.5em;
+}
+
+.introduce-header-one .header-big span {
+    color: var(--muted);
+    font-weight: 500;
 }
 
 .introduce-header-one .header-text {
-    width: 60%;
+    width: 100%;
+    max-width: 34rem;
+    color: var(--muted);
+    font-size: 1.05em;
+}
+
+.header-actions {
+    display: flex;
+    gap: 0.8em;
+    margin-top: 1.7em;
+    flex-wrap: wrap;
 }
 
 .introduce-header-one .button-github {
-    margin-top: 1.7em;
-    width: 14em;
-    border: 2px solid white;
-    color: white;
+    display: inline-block;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
     text-decoration: none;
-    border-radius: 1.3em;
-    font-size: 0.9em;
-    padding: 0.8em 0.4em 0.8em 0.4em;
+    border-radius: 999px;
+    font-size: 0.92em;
+    padding: 0.8em 1.6em;
     text-align: center;
     font-weight: 600;
-    transition: all 0.5s linear;
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .introduce-header-one .button-github:hover {
-    background-color: white;
-    color: black;
+    opacity: 0.85;
+    transform: translateY(-1px);
+    background-color: var(--accent);
+    color: #fff;
+}
+
+.header-actions .button-secondary {
+    display: inline-block;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 0.92em;
+    padding: 0.8em 1.6em;
+    font-weight: 600;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.header-actions .button-secondary:hover {
+    border-color: var(--text);
+    transform: translateY(-1px);
 }
 
 .container .introduce-header-two {
     display: flex;
     flex: 1;
-    border-radius: 50%;
-    background-color: white;
-    padding: 10px;
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    padding: 8px;
 } 
 
 .container .introduce-header-two img {
@@ -162,7 +237,7 @@ nav ul .nav-info-item a:hover:before {
     max-height: 400px;
     background-position: center;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 12px;
 }
 
 /* Bagian section about me */
@@ -711,49 +786,22 @@ footer .footer-bottom {
     /* responsive section introduce */
     .container .introduce-header {
         flex-direction: column-reverse;
-        margin-top: 4em;
-        margin-bottom: -2.6em;
+        margin-top: 2.5em;
+        margin-bottom: 0;
+        gap: 1.5em;
     }
 
-    .introduce-header-one .header-small {
-        font-size: 1.5em;
-    }
-    
-    .introduce-header-one .header-big {
-        font-size: 1.9em;
-        font-weight: 700;
-        margin-bottom: 0.2em;
-    }
-    
     .introduce-header-one .header-text {
-        width: 90%;
+        max-width: 100%;
     }
-    
-    .introduce-header-one .button-github {
-        margin-top: 1.7em;
-        width: 12em;
-        border: 2px solid white;
-        color: white;
-        text-decoration: none;
-        border-radius: 1.3em;
-        font-size: 0.9em;
-        padding: 0.8em 0.4em 0.8em 0.4em;
-        text-align: center;
-        font-weight: 600;
-        transition: all 0.5s linear;
-    }
-    
-    .introduce-header-one .button-github:hover {
-        background-color: white;
-        color: black;
-    }
-    
+
     .container .introduce-header-two {
-        border-radius: 10%;
-        background-color: white;
+        border-radius: var(--radius);
+        background-color: var(--surface);
+        border: 1px solid var(--border);
         padding: 8px;
         width: 100%;
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
     } 
     
     .container .introduce-header-two img {
@@ -761,7 +809,7 @@ footer .footer-bottom {
         max-height: 350px;
         background-position: center;
         object-fit: cover;
-        border-radius: 10%;
+        border-radius: 12px;
     }
 
     /* section about */

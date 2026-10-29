@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>masapistech</title>
+    <title>Abdul Hafidz — Junior Web Developer | MasApisTech</title>
+    <meta name="description" content="Portofolio Abdul Hafidz, Junior Web Developer. Fokus web programming, lulusan SMK TKJ, mahasiswa Teknik Informatika UMRAH.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23121212'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>A</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 </head>
 <body>
-    <nav>
+    <nav aria-label="Navigasi utama">
         <div class="nav-header">masapistech</div> 
-        <div class="menu-icon" id="menu-icon">
-            <i class="ph ph-list"></i>
-        </div> 
+        <button class="menu-icon" id="menu-icon" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="menu-list">
+            <i class="ph ph-list" aria-hidden="true"></i>
+        </button> 
         <ul class="hidden" id="menu-list">
             <li class="nav-info-item"><a href="#introduce-header">Home</a></li>
             <li class="nav-info-item"><a href="#about">About</a></li>
@@ -26,10 +31,13 @@
     <main class="container">
         <section class="introduce-header" id="introduce-header">
             <div class="introduce-header-one">
-                <div class="header-small">Hello, I'm</div>
-                <div class="header-big">Abdul Hafidz Junior Web Developer</div>
-                <div class="header-text">Saya bagus dalam belajar hal baru, dan saya sangat menyukai teknologi apa pun itu. Saat ini saya sedang fokus belajar pengembangan web......</div>
-                <a href="https://github.com/MasApis" target="_blank" class="button-github" rel="noopener noreferrer">Connect my github</a>
+                <p class="header-eyebrow">Halo, saya</p>
+                <h1 class="header-big">Abdul Hafidz<br><span>Junior Web Developer</span></h1>
+                <p class="header-text">Saya suka belajar hal baru dan teknologi. Saat ini fokus di web programming — HTML, CSS, dan JavaScript.</p>
+                <div class="header-actions">
+                    <a href="https://github.com/MasApis" target="_blank" class="button-github" rel="noopener noreferrer">Lihat GitHub</a>
+                    <a href="#portfolio" class="button-secondary">Lihat Portofolio</a>
+                </div>
             </div>
             <div class="introduce-header-two">
                 <img src="icons/image.jpg" alt="foto-abdul" class="header-image">
@@ -193,7 +201,8 @@
                     <div class="form-header">
                         <h2>Contact me</h2>
                     </div>
-                    <input type="hidden" name="access_key" value="eeb31f4b-7446-4c8f-a8cf-346a1a687713">
+                    <!-- TODO: ganti dengan access key baru dari web3forms.com — key lama terekspos di git history, segera revoke -->
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
                     <input type="text" name="name" placeholder="Your name" class="contact-inputs" required>
                     <input type="email" name="email" placeholder="Your email" class="contact-inputs" required>
                     <textarea name="message" placeholder="Your message" required></textarea>
