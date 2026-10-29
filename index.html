@@ -8,7 +8,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23121212'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>A</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 </head>
@@ -31,16 +31,18 @@
     <main class="container">
         <section class="introduce-header" id="introduce-header">
             <div class="introduce-header-one">
-                <p class="header-eyebrow">Halo, saya</p>
-                <h1 class="header-big">Abdul Hafidz<br><span>Junior Web Developer</span></h1>
-                <p class="header-text">Saya suka belajar hal baru dan teknologi. Saat ini fokus di web programming — HTML, CSS, dan JavaScript.</p>
+                <p class="header-eyebrow">Bintan — Mahasiswa Informatika UMRAH</p>
+                <h1 class="header-big">Abdul Hafidz membangun untuk web.</h1>
+                <p class="header-text">Junior Web Developer dari latar Teknik Komputer dan Jaringan. Fokus HTML, CSS, dan JavaScript — terbiasa dengan kabel, kini merapikan antarmuka.</p>
                 <div class="header-actions">
                     <a href="https://github.com/MasApis" target="_blank" class="button-github" rel="noopener noreferrer">Lihat GitHub</a>
-                    <a href="#portfolio" class="button-secondary">Lihat Portofolio</a>
+                    <a href="#portfolio" class="button-secondary">Lihat kerja saya ↓</a>
                 </div>
+                <p class="header-status"><span class="status-dot" aria-hidden="true"></span> Terbuka untuk magang & project kecil</p>
             </div>
             <div class="introduce-header-two">
-                <img src="icons/image.jpg" alt="foto-abdul" class="header-image">
+                <svg class="cable" viewBox="0 0 200 40" aria-hidden="true" focusable="false"><path d="M4 32 C 60 32, 60 8, 110 8 S 160 8, 196 8" fill="none" stroke="#30AFFF" stroke-width="2.5" stroke-linecap="round"/><circle cx="4" cy="32" r="4" fill="#121212"/><circle cx="196" cy="8" r="4" fill="#30AFFF"/></svg>
+                <img src="icons/image.jpg" alt="Foto Abdul Hafidz" class="header-image" fetchpriority="high">
             </div>
         </section>
         <section class="about" id="about">
@@ -48,186 +50,146 @@
                 <img src="icons/image2.jpg" alt="Foto Abdul Hafidz" class="about-image" loading="lazy">
             </div>
             <div class="section-about-info">
-                <p class="section-eyebrow">Tentang saya</p>
-                <h2 class="about-header">About me</h2>
+                <p class="section-label">Tentang</p>
+                <h2 class="about-header">Dari kabel jaringan ke antarmuka web.</h2>
                 <p class="about-text">
-                    Halo, saya Abdul Hafidz, biasa dipanggil Dufi. Saya pemula di bidang programming yang saat ini fokus belajar web programming. Saya lulusan SMK jurusan Teknik Komputer dan Jaringan, dan sekarang kuliah di Universitas Maritim Raja Ali Haji jurusan Teknik Informatika.
+                    Halo, saya Abdul Hafidz, biasa dipanggil Dufi. Lulusan SMK Teknik Komputer dan Jaringan, kini mahasiswa Teknik Informatika di Universitas Maritim Raja Ali Haji.
                 </p>
                 <p class="about-text">
-                    Saya mulai tertarik teknologi sejak SMP lewat perkembangan smartphone. Ketertarikan ke pemrograman muncul saat SMK, dengan Java sebagai bahasa pertama yang saya pelajari.
+                    Saya mulai tertarik teknologi sejak SMP lewat smartphone. Di SMK saya kenal pemrograman lewat Java, lalu jatuh ke web: HTML, CSS, dan sekarang JavaScript.
                 </p>
-                <ul class="about-tags">
-                    <li>Web Programming</li>
-                    <li>TKJ Background</li>
-                    <li>Informatika UMRAH</li>
-                </ul>
             </div>
         </section>
         <section class="education" id="education">
-            <p class="section-eyebrow section-eyebrow-centered">Riwayat</p>
+            <p class="section-label">01 — Rute</p>
             <h2 class="education-header">Education</h2>
-            <div class="education-info">
-                <article class="education-school">
-                    <img src="icons/sd.jpg" alt="SDN 009 Bintan Timur" class="education-image" loading="lazy">
+            <ol class="education-info">
+                <li class="education-school">
                     <div class="education-body">
                         <span class="education-year">2014 – 2019</span>
                         <h3>SDN 009 Bintan Timur</h3>
                         <p class="education-text">
                             Sekolah dasar di Bintan Timur.
                         </p>
-                        <div class="button">
-                            <a href="https://dapo.kemdikbud.go.id/sekolah/ACEA0C941F089075DBFD" target="_blank" rel="noopener noreferrer">Info lebih lanjut</a>
-                        </div>
                     </div>
-                </article>
-                <article class="education-school">
-                    <img src="icons/smp.jpg" alt="SMPN 3 Bintan Timur" class="education-image" loading="lazy">
+                </li>
+                <li class="education-school">
                     <div class="education-body">
                         <span class="education-year">2019 – 2022</span>
                         <h3>SMPN 3 Bintan Timur</h3>
                         <p class="education-text">
                             Mulai tertarik teknologi dan smartphone.
                         </p>
-                        <div class="button">
-                            <a href="https://dapo.kemdikbud.go.id/sekolah/A82B303BBF117BC13668" target="_blank" rel="noopener noreferrer">Info lebih lanjut</a>
-                        </div>
                     </div>
-                </article>
-                <article class="education-school">
-                    <img src="icons/smk.jpg" alt="SMKN 4 Tanjungpinang" class="education-image" loading="lazy">
+                </li>
+                <li class="education-school">
                     <div class="education-body">
                         <span class="education-year">2022 – 2024</span>
-                        <h3>SMKN 4 Tanjungpinang</h3>
+                        <h3>SMKN 4 Tanjungpinang — TKJ</h3>
                         <p class="education-text">
-                            Jurusan Teknik Komputer dan Jaringan. Mulai belajar pemrograman.
+                            Teknik Komputer dan Jaringan. Bahasa pertama: Java.
                         </p>
-                        <div class="button">
-                            <a href="https://smkn4-tanjungpinang.sch.id/" rel="noopener noreferrer" target="_blank">Info lebih lanjut</a>
-                        </div>
                     </div>
-                </article>
-                <article class="education-school">
-                    <img src="icons/univ.jpg" alt="Universitas Maritim Raja Ali Haji" class="education-image" loading="lazy">
+                </li>
+                <li class="education-school">
                     <div class="education-body">
                         <span class="education-year education-year-now">2024 – Sekarang</span>
-                        <h3>UMRAH Informatika</h3>
+                        <h3>UMRAH — Teknik Informatika</h3>
                         <p class="education-text">
-                            Kuliah Teknik Informatika, fokus web programming.
+                            Fokus web programming. <a href="https://umrah.ac.id/" target="_blank" rel="noopener noreferrer">umrah.ac.id</a>
                         </p>
-                        <div class="button">
-                            <a href="https://umrah.ac.id/" target="_blank" rel="noopener noreferrer">Info lebih lanjut</a>
-                        </div>
                     </div>
-                </article>
-            </div>
+                </li>
+            </ol>
         </section>
         <section class="skills" id="skills">
-            <p class="section-eyebrow section-eyebrow-centered">Kemampuan</p>
-            <h2 class="skills-header">Skills</h2>
-            <div class="skills-info">
-                <div class="skills-info-item">
-                    <img src="icons/html.svg" alt="HTML" loading="lazy">
-                    <h3>HTML</h3>
-                    <span class="skill-level">Menengah</span>
+            <p class="section-label">Kemampuan</p>
+            <h2 class="skills-header">Yang saya pakai</h2>
+            <ul class="skills-info">
+                <li class="skills-info-item">
+                    <div class="skill-top"><h3>HTML</h3><span class="skill-level">Menengah</span></div>
                     <div class="skill-bar"><span style="width: 75%"></span></div>
-                </div>
-                <div class="skills-info-item">
-                    <img src="icons/css.svg" alt="CSS" loading="lazy">
-                    <h3>CSS</h3>
-                    <span class="skill-level">Menengah</span>
+                </li>
+                <li class="skills-info-item">
+                    <div class="skill-top"><h3>CSS</h3><span class="skill-level">Menengah</span></div>
                     <div class="skill-bar"><span style="width: 70%"></span></div>
-                </div>
-                <div class="skills-info-item skill-js">
-                    <span class="skill-js-badge">JS</span>
-                    <h3>JavaScript</h3>
-                    <span class="skill-level">Dasar</span>
+                </li>
+                <li class="skills-info-item">
+                    <div class="skill-top"><h3>JavaScript</h3><span class="skill-level">Dasar</span></div>
                     <div class="skill-bar"><span style="width: 40%"></span></div>
-                </div>
-                <div class="skills-info-item">
-                    <img src="icons/icons8-python-144.png" alt="Python" loading="lazy">
-                    <h3>Python</h3>
-                    <span class="skill-level">Dasar</span>
-                    <div class="skill-bar"><span style="width: 35%"></span></div>
-                </div>
-                <div class="skills-info-item">
-                    <img src="icons/icons8-kotlin-144.png" alt="Kotlin" loading="lazy">
-                    <h3>Kotlin</h3>
-                    <span class="skill-level">Dasar</span>
-                    <div class="skill-bar"><span style="width: 30%"></span></div>
-                </div>
-                <div class="skills-info-item">
-                    <img src="icons/icons8-linux-96.png" alt="Linux" loading="lazy">
-                    <h3>Linux</h3>
-                    <span class="skill-level">Dasar</span>
+                </li>
+                <li class="skills-info-item">
+                    <div class="skill-top"><h3>Linux</h3><span class="skill-level">Dasar</span></div>
                     <div class="skill-bar"><span style="width: 45%"></span></div>
-                </div>
-            </div>
+                </li>
+                <li class="skills-info-item">
+                    <div class="skill-top"><h3>Python</h3><span class="skill-level">Dasar</span></div>
+                    <div class="skill-bar"><span style="width: 35%"></span></div>
+                </li>
+                <li class="skills-info-item">
+                    <div class="skill-top"><h3>Kotlin</h3><span class="skill-level">Dasar</span></div>
+                    <div class="skill-bar"><span style="width: 30%"></span></div>
+                </li>
+            </ul>
         </section>
         <section class="portfolio" id="portfolio">
-            <p class="section-eyebrow section-eyebrow-centered">Karya</p>
-            <h2 class="portfolio-header">Portfolio</h2>
+            <p class="section-label">02 — Kerja terpilih</p>
+            <h2 class="portfolio-header">Satu yang paling rapi, sisanya latihan.</h2>
             <div class="portfolio-info">
-                <article class="portfolio-info-item">
+                <article class="portfolio-info-item portfolio-featured">
                     <img src="icons/portfolio-1.png" alt="Website portfolio" loading="lazy">
                     <div class="portfolio-body">
-                        <span class="portfolio-tag">Mei 2024 • HTML • CSS</span>
-                        <h3>Website Portfolio</h3>
+                        <h3>Website Portfolio — project pertama yang selesai</h3>
                         <p class="portfolio-info-text">
-                            Project portfolio pertama setelah menyelesaikan materi HTML dan CSS di Codepolitan.
+                            Dibangun setelah materi HTML dan CSS Codepolitan, Mei 2024. Fondasi dari semua yang ada di halaman ini.
                         </p>
                         <div class="button-portfolio">
-                            <a href="https://masapis.github.io/website-portfolio/" target="_blank" rel="noopener noreferrer">Kunjungi website</a>
+                            <a href="https://masapis.github.io/website-portfolio/" target="_blank" rel="noopener noreferrer">Lihat demo</a>
                         </div>
                     </div>
                 </article>
                 <article class="portfolio-info-item">
-                    <img src="icons/portfolio-2.png" alt="Profile card" loading="lazy">
                     <div class="portfolio-body">
-                        <span class="portfolio-tag">Mei 2024 • HTML • CSS</span>
                         <h3>Profile Card</h3>
                         <p class="portfolio-info-text">
-                            Latihan profile card dari tutorial YouTube CodingLab.
+                            Latihan dari tutorial CodingLab, Mei 2024.
                         </p>
                         <div class="button-portfolio">
-                            <a href="https://masapis.github.io/profile-Card-abdul-/" target="_blank" rel="noopener noreferrer">Kunjungi website</a>
+                            <a href="https://masapis.github.io/profile-Card-abdul-/" target="_blank" rel="noopener noreferrer">Lihat demo</a>
                         </div>
                     </div>
                 </article>
                 <article class="portfolio-info-item">
-                    <img src="icons/portfolio-3.png" alt="Latihan tiruan halaman login" loading="lazy">
                     <div class="portfolio-body">
-                        <span class="portfolio-tag">Mei 2024 • HTML • CSS</span>
                         <h3>Tiruan Halaman Login</h3>
                         <p class="portfolio-info-text">
-                            Latihan mandiri meniru tampilan halaman login untuk belajar layout form. Tanpa backend, tanpa pengumpulan data.
+                            Latihan layout form tanpa backend, tanpa pengumpulan data.
                         </p>
                         <div class="button-portfolio">
-                            <a href="https://masapis.github.io/Clone-loginpage-w3school-2024/" target="_blank" rel="noopener noreferrer">Kunjungi website</a>
+                            <a href="https://masapis.github.io/Clone-loginpage-w3school-2024/" target="_blank" rel="noopener noreferrer">Lihat demo</a>
                         </div>
                     </div>
                 </article>
                 <article class="portfolio-info-item">
-                    <img src="icons/portfolio-4.png" alt="Tabel harga internet" loading="lazy">
                     <div class="portfolio-body">
-                        <span class="portfolio-tag">Agustus 2024 • HTML • CSS</span>
                         <h3>Tabel Harga Internet</h3>
                         <p class="portfolio-info-text">
-                            Latihan pricing table dengan tampilan pilihan pembayaran (UI saja, tanpa transaksi asli).
+                            Pricing UI saja, tanpa transaksi asli. Agustus 2024.
                         </p>
                         <div class="button-portfolio">
-                            <a href="https://masapis.github.io/myTablePricing/" target="_blank" rel="noopener noreferrer">Kunjungi website</a>
+                            <a href="https://masapis.github.io/myTablePricing/" target="_blank" rel="noopener noreferrer">Lihat demo</a>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
         <section class="certificate" id="certificate">
-            <p class="section-eyebrow section-eyebrow-centered">Pencapaian</p>
-            <h2 class="certificate-header">Certificate</h2>
+            <p class="section-label">Bukti</p>
+            <h2 class="certificate-header">Sertifikat — geser ke samping</h2>
             <div class="certificate-info">
                 <figure class="certificate-info-item">
                     <img src="icons/certi-alibaba-cloud.png" alt="Sertifikat Alibaba Cloud" loading="lazy">
-                    <figcaption><strong>Alibaba Cloud</strong><span>Cloud Computing</span></figcaption>
+                    <figcaption><strong>Alibaba Cloud</strong><span>Cloud</span></figcaption>
                 </figure>
                 <figure class="certificate-info-item">
                     <img src="icons/certi-codepolitan-html.png" alt="Sertifikat Codepolitan HTML" loading="lazy">
@@ -239,11 +201,11 @@
                 </figure>
                 <figure class="certificate-info-item">
                     <img src="icons/certi-lksitnsa.jpg" alt="Sertifikat lomba LKS IT NSA" loading="lazy">
-                    <figcaption><strong>LKS IT NSA</strong><span>Kompetisi</span></figcaption>
+                    <figcaption><strong>LKS IT NSA</strong><span>Lomba</span></figcaption>
                 </figure>
                 <figure class="certificate-info-item">
                     <img src="icons/certi-dicoding.jpg" alt="Sertifikat Dicoding Logika Pemrograman" loading="lazy">
-                    <figcaption><strong>Dicoding</strong><span>Programming Logic</span></figcaption>
+                    <figcaption><strong>Dicoding</strong><span>Logika</span></figcaption>
                 </figure>
                 <figure class="certificate-info-item">
                     <img src="icons/certi-duniaCoding.jpg" alt="Sertifikat DuniaCoding Android" loading="lazy">
@@ -252,9 +214,8 @@
             </div>
         </section>
         <section class="contact" id="contact">
-            <p class="section-eyebrow section-eyebrow-centered">Kontak</p>
-            <h2 class="contact-title">Hubungi saya</h2>
-            <p class="contact-desc">Punya project, magang, atau sekadar diskusi web? Kirim pesan lewat form ini.</p>
+            <p class="section-label">Kontak</p>
+            <h2 class="contact-title">Punya project kecil? Kirim pesan.</h2>
             <div class="contact-info">
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <!-- TODO: ganti dengan access key baru dari web3forms.com — key lama terekspos di git history, segera revoke -->
