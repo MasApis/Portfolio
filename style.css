@@ -347,69 +347,134 @@ nav ul .nav-info-item a:hover:before {
 
 /* Section education */
 .education {
-    width: 90%;
-    margin-top: 10em;
-    padding: 10px 0 10px 0;
-    /* border: 1px solid white; */
+    width: 100%;
+    margin-top: 3.5em;
+}
+
+.section-eyebrow-centered {
+    display: table;
+    margin: 0 auto 0.7em;
 }
 
 .education-header {
-    font-size: 3em;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     font-weight: 700;
+    letter-spacing: -0.02em;
     text-align: center;
-    margin-bottom: 0.7em;
+    margin-bottom: 1.2em;
 }
 
 .education .education-info {
-    display: flex;
-    margin-top: 1em;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    margin-top: 0;
+    gap: 1.2rem;
 }
 
 .education-info .education-school {
-    flex: 0.2;
-    padding: 1.2em;
-    background-color: white;
-    color: black;
-    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.education-info .education-school:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(18, 18, 18, 0.08);
 }
 
 .education-school .education-image {
-    max-width: 305px;
-    height: 230px;
-    border-radius: 9px;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.education-body {
+    padding: 1.1em 1.2em 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    flex: 1;
+}
+
+.education-body h3 {
+    font-size: 1.02em;
+    letter-spacing: -0.01em;
+}
+
+.education-year {
+    align-self: flex-start;
+    font-size: 0.75em;
+    font-weight: 700;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 0.3em 0.8em;
+    border-radius: 999px;
+    color: var(--muted);
+}
+
+.education-school:nth-child(1) .education-year {
+    background: var(--mint);
+    border-color: var(--mint-soft);
+    color: var(--text);
+}
+
+.education-school:nth-child(2) .education-year {
+    background: var(--accent-soft);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.education-school:nth-child(3) .education-year {
+    background: var(--mint-soft);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.education-year-now {
+    background: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: #fff !important;
 }
 
 .education-school .education-text {
-    font-size: 1em;
-    font-weight: 500;
-    margin: 0.5em 0 0.5em 0; 
+    font-size: 0.92em;
+    font-weight: 400;
+    color: var(--muted);
+    margin: 0;
+    flex: 1;
 }
 
 .education-school .button {
     display: flex;
-    justify-content: center;
-    margin: 0.8em 0 0.6em 0;
+    justify-content: flex-start;
+    margin: 0.6em 0 0;
 }
 
 .button a {
     text-decoration: none;
     display: inline-block;
-    border: 1px solid black;
-    padding: 0.8em;
-    color: black;
+    border: 1px solid var(--border);
+    padding: 0.65em 1.2em;
+    color: var(--text);
     font-weight: 600;
-    border-radius: 20px;
+    font-size: 0.88em;
+    border-radius: 999px;
     text-align: center;
     cursor: pointer;
-    transition: all 0.5s linear;
+    transition: border-color 0.25s ease, background 0.25s ease;
 }
 
 .button a:hover {
-    background-color: black;
-    color: white;
+    border-color: var(--accent);
+    background-color: var(--accent);
+    color: #fff;
 }
 
 /* Section skills */
@@ -882,18 +947,8 @@ footer .footer-bottom {
     }
 
     /* section education */
-    .education-info .education-school {
-        max-width: 330px;
-        padding: 0.9em;
-        background-color: white;
-        color: black;
-        border-radius: 10px;
-    }
-    
-    .education-school .education-image .sd {
-        max-width: 305px;
-        height: 210px;
-        border-radius: 9px;
+    .education .education-info {
+        grid-template-columns: 1fr;
     }
 
     /* section portfolio */ 
