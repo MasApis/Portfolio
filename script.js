@@ -1,18 +1,23 @@
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
+const backdrop = document.getElementById("menu-backdrop");
 
 function setMenu(open) {
     menuBtn.classList.toggle("open", open);
     mobileMenu.classList.toggle("open", open);
+    backdrop.classList.toggle("open", open);
     menuBtn.setAttribute("aria-expanded", String(open));
     menuBtn.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
     mobileMenu.setAttribute("aria-hidden", String(!open));
+    backdrop.setAttribute("aria-hidden", String(!open));
     document.body.style.overflow = open ? "hidden" : "";
 }
 
 menuBtn.addEventListener("click", () => {
     setMenu(!mobileMenu.classList.contains("open"));
 });
+
+backdrop.addEventListener("click", () => setMenu(false));
 
 mobileMenu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => setMenu(false));

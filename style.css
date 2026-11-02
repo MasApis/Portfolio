@@ -82,7 +82,7 @@ a { color: inherit; }
 .site-nav {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 200;
     background: var(--v2-ink);
     border-bottom: 1px solid var(--v2-line);
 }
@@ -122,13 +122,34 @@ a { color: inherit; }
 .nav-cta:hover { background: var(--v2-lime); color: var(--v2-ink); }
 .nav-mobile { display: none; }
 
-/* Mobile menu */
+/* Mobile menu — fixed slide-in dari kanan */
+.menu-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 11, 12, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 140;
+}
+.menu-backdrop.open { opacity: 1; pointer-events: auto; }
 .mobile-menu {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(390px, 100%);
+    height: 100dvh;
     background: var(--v2-lime);
     color: var(--v2-ink);
+    z-index: 150;
+    overflow-y: auto;
+    padding-top: 65px;
+    transform: translateX(102%);
+    visibility: hidden;
+    transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.38s;
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.35);
 }
-.mobile-menu.open { display: block; }
+.mobile-menu.open { transform: none; visibility: visible; }
 .mm-head {
     display: flex;
     justify-content: space-between;
