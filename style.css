@@ -604,13 +604,28 @@ a { color: inherit; }
     color: var(--v2-ink);
     overflow: hidden;
     padding: 44px 0;
-    text-align: center;
+}
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 30s linear infinite;
+    will-change: transform;
 }
 .marquee p {
+    flex: none;
+    padding-right: 3rem;
     font-family: var(--font-display);
     font-size: clamp(28px, 4vw, 56px);
     letter-spacing: 4px;
     white-space: nowrap;
+}
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
 }
 
 /* Footer */
