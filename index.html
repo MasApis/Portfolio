@@ -4,307 +4,353 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdul Hafidz — Junior Web Developer | MasApisTech</title>
-    <meta name="description" content="Portofolio Abdul Hafidz, Junior Web Developer. Fokus web programming, lulusan SMK TKJ, mahasiswa Teknik Informatika UMRAH.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23121212'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>A</text></svg>">
+    <meta name="description" content="Portofolio Abdul Hafidz, Junior Web Developer dari Bintan. HTML, CSS, JavaScript — rapi, responsif, dan mudah dipakai.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B0B0C'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23D9FF3C' font-family='sans-serif' font-weight='bold'>A</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#introduce-header">Lewati ke konten utama</a>
-    <nav aria-label="Navigasi utama">
-        <div class="nav-header">masapistech</div> 
-        <button class="menu-icon" id="menu-icon" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="menu-list">
-            <i class="ph ph-list" aria-hidden="true"></i>
-        </button> 
-        <ul class="hidden" id="menu-list">
-            <li class="nav-info-item"><a href="#introduce-header">Home</a></li>
-            <li class="nav-info-item"><a href="#about">About</a></li>
-            <li class="nav-info-item"><a href="#education">Education</a></li>
-            <li class="nav-info-item"><a href="#skills">Skills</a></li>
-            <li class="nav-info-item"><a href="#portfolio">Portfolio</a></li>
-            <li class="nav-info-item"><a href="#certificate">Certificate</a></li>
-            <li class="nav-info-item"><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main class="container">
-        <section class="introduce-header" id="introduce-header">
-            <div class="introduce-header-one">
-                <p class="header-eyebrow">Bintan — Mahasiswa Informatika UMRAH</p>
-                <h1 class="header-big">Abdul Hafidz membangun untuk web.</h1>
-                <p class="header-text">Junior Web Developer dari latar Teknik Komputer dan Jaringan. Fokus HTML, CSS, dan JavaScript — terbiasa dengan kabel, kini merapikan antarmuka.</p>
-                <div class="header-actions">
-                    <a href="https://github.com/MasApis" target="_blank" class="button-github" rel="noopener noreferrer">Lihat GitHub</a>
-                    <a href="#portfolio" class="button-secondary">Lihat kerja saya ↓</a>
+    <a class="skip-link" href="#home">Lewati ke konten utama</a>
+
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <span>OPEN TO WORK</span><span aria-hidden="true">·</span>
+            <span>MAGANG 2026</span><span aria-hidden="true">·</span>
+            <span>BINTAN · INDONESIA</span><span aria-hidden="true">·</span>
+            <span>HTML · CSS · JAVASCRIPT</span><span aria-hidden="true">·</span>
+            <span>OPEN TO WORK</span><span aria-hidden="true">·</span>
+            <span>MAGANG 2026</span><span aria-hidden="true">·</span>
+            <span>BINTAN · INDONESIA</span><span aria-hidden="true">·</span>
+            <span>HTML · CSS · JAVASCRIPT</span><span aria-hidden="true">·</span>
+        </div>
+    </div>
+
+    <header class="site-nav">
+        <nav class="nav-desktop" aria-label="Navigasi utama">
+            <a class="brand" href="#home"><span class="brand-index">[01]</span><span class="brand-word">masapistech</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="is-active">HOME</a></li>
+                <li><a href="#tentang">TENTANG</a></li>
+                <li><a href="#edukasi">EDUKASI</a></li>
+                <li><a href="#skill">SKILL</a></li>
+                <li><a href="#karya">KARYA</a></li>
+                <li><a href="#sertifikat">SERTIFIKAT</a></li>
+                <li><a href="#kontak">KONTAK</a></li>
+            </ul>
+            <a class="nav-cta" href="#kontak">MARI BICARA →</a>
+        </nav>
+        <nav class="nav-mobile" aria-label="Navigasi seluler">
+            <a class="brand" href="#home"><span class="brand-index">[01]</span><span class="brand-word">masapistech</span></a>
+            <button class="menu-btn" id="menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                <svg class="icon-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <p class="mm-head"><span>MENU</span><span>01 — 07</span></p>
+        <nav aria-label="Menu seluler">
+            <ul class="mm-list">
+                <li><a href="#home"><span class="mm-index">01</span><span class="mm-label">HOME</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li>
+                <li><a href="#tentang"><span class="mm-index">02</span><span class="mm-label">TENTANG</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li>
+                <li><a href="#edukasi"><span class="mm-index">03</span><span class="mm-label">EDUKASI</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li>
+                <li><a href="#skill"><span class="mm-index">04</span><span class="mm-label">SKILL</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li>
+                <li><a href="#karya"><span class="mm-index">05</span><span class="mm-label">KARYA</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li>
+                <li><a href="#sertifikat"><span class="mm-index">06</span><span class="mm-label">SERTIFIKAT</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li>
+                <li><a href="#kontak"><span class="mm-index">07</span><span class="mm-label">KONTAK</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li>
+            </ul>
+        </nav>
+        <div class="mm-bottom">
+            <p class="mm-key">EMAIL</p>
+            <p class="mm-value">abdulhafidz3105@gmail.com</p>
+            <p class="mm-key">LOKASI</p>
+            <p class="mm-value">Bintan Timur, Kepulauan Riau</p>
+            <div class="social-chips">
+                <a href="https://github.com/MasApis" target="_blank" rel="noopener noreferrer">GITHUB</a>
+                <a href="https://www.instagram.com/masapistech/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+                <a href="mailto:abdulhafidz3105@gmail.com">EMAIL</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <p class="kicker-row"><span>JUNIOR WEB DEVELOPER — BINTAN, KEP. RIAU</span><span class="kicker-right">PORTFOLIO / 2026 / 01</span></p>
+            <div class="hero-main">
+                <div class="hero-copy">
+                    <p class="chip-avail"><span class="dot" aria-hidden="true"></span>OPEN TO WORK · MAGANG 2026</p>
+                    <h1 id="hero-title" class="name-block"><span>ABDUL</span><span>HAFIDZ</span></h1>
+                    <p class="accent-quote"><span class="accent-bar" aria-hidden="true"></span><em>“Dufi” — Keep Learning and Always be Grateful</em></p>
+                    <p class="lead">Junior web developer dari Bintan. Merapikan antarmuka dengan HTML, CSS, dan JavaScript — rapi, responsif, dan mudah dipakai.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary" href="#karya">LIHAT KARYA ↓</a>
+                        <a class="btn-secondary" href="#kontak">HUBUNGI SAYA</a>
+                    </div>
+                    <ul class="meta-list" aria-label="Info singkat">
+                        <li>Bintan, Kep. Riau (WIB)</li>
+                        <li aria-hidden="true">·</li>
+                        <li>Universitas Maritim Raja Ali Haji</li>
+                        <li aria-hidden="true">·</li>
+                        <li>2021 — sekarang</li>
+                    </ul>
                 </div>
-                <p class="header-status"><span class="status-dot" aria-hidden="true"></span> Terbuka untuk magang & project kecil</p>
-            </div>
-            <div class="introduce-header-two">
-                <svg class="cable" viewBox="0 0 200 40" aria-hidden="true" focusable="false"><path d="M4 32 C 60 32, 60 8, 110 8 S 160 8, 196 8" fill="none" stroke="#30AFFF" stroke-width="2.5" stroke-linecap="round"/><circle cx="4" cy="32" r="4" fill="#121212"/><circle cx="196" cy="8" r="4" fill="#30AFFF"/></svg>
-                <img src="icons/image.jpg" alt="Foto Abdul Hafidz" class="header-image" fetchpriority="high">
-            </div>
-        </section>
-        <section class="about" id="about">
-            <div class="section-about-image">
-                <img src="icons/image2.jpg" alt="Foto Abdul Hafidz" class="about-image" loading="lazy">
-            </div>
-            <div class="section-about-info">
-                <p class="section-label">Tentang</p>
-                <h2 class="about-header">Dari kabel jaringan ke antarmuka web.</h2>
-                <p class="about-text">
-                    Halo, saya Abdul Hafidz, biasa dipanggil Dufi. Lulusan SMK Teknik Komputer dan Jaringan, kini mahasiswa Teknik Informatika di Universitas Maritim Raja Ali Haji.
-                </p>
-                <p class="about-text">
-                    Saya mulai tertarik teknologi sejak SMP lewat smartphone. Di SMK saya kenal pemrograman lewat Java, lalu jatuh ke web: HTML, CSS, dan sekarang JavaScript.
-                </p>
+                <figure class="portrait-block">
+                    <div class="portrait-accent" aria-hidden="true"></div>
+                    <img class="portrait-img" src="icons/image.jpg" alt="Foto Abdul Hafidz" fetchpriority="high">
+                    <figcaption class="portrait-caption">
+                        <strong>ABDUL HAFIDZ — “DUFI”</strong>
+                        <span>MAHASISWA INFORMATIKA UMRah</span>
+                    </figcaption>
+                    <span class="side-label" aria-hidden="true">PORTRAIT / 2026</span>
+                </figure>
             </div>
         </section>
-        <section class="education" id="education">
-            <p class="section-label">01 — Rute</p>
-            <h2 class="education-header">Education</h2>
-            <ol class="education-info">
-                <li class="education-school">
-                    <div class="education-body">
-                        <span class="education-year">2013 – 2018</span>
-                        <h3>SDN 009 Bintan Timur</h3>
-                        <p class="education-text">
-                            Sekolah dasar di Bintan Timur.
-                        </p>
-                    </div>
-                </li>
-                <li class="education-school">
-                    <div class="education-body">
-                        <span class="education-year">2018 – 2021</span>
-                        <h3>SMPN 3 Bintan Timur</h3>
-                        <p class="education-text">
-                            Mulai tertarik teknologi dan smartphone.
-                        </p>
-                    </div>
-                </li>
-                <li class="education-school">
-                    <div class="education-body">
-                        <span class="education-year">2021 – 2024</span>
-                        <h3>SMKN 4 Tanjungpinang — TKJ</h3>
-                        <p class="education-text">
-                            Teknik Komputer dan Jaringan. Bahasa pertama: Java.
-                        </p>
-                    </div>
-                </li>
-                <li class="education-school">
-                    <div class="education-body">
-                        <span class="education-year education-year-now">2024 – Sekarang</span>
-                        <h3>UMRAH — Teknik Informatika</h3>
-                        <p class="education-text">
-                            Fokus web programming. <a href="https://umrah.ac.id/" target="_blank" rel="noopener noreferrer">umrah.ac.id</a>
-                        </p>
-                    </div>
-                </li>
-            </ol>
-        </section>
-        <section class="skills" id="skills">
-            <p class="section-label">Kemampuan</p>
-            <h2 class="skills-header">Yang saya pakai</h2>
-            <ul class="skills-info">
-                <li class="skills-info-item">
-                    <div class="skill-top"><h3>HTML</h3><span class="skill-level">Menengah</span></div>
-                    <div class="skill-bar"><span style="width: 75%"></span></div>
-                </li>
-                <li class="skills-info-item">
-                    <div class="skill-top"><h3>CSS</h3><span class="skill-level">Menengah</span></div>
-                    <div class="skill-bar"><span style="width: 70%"></span></div>
-                </li>
-                <li class="skills-info-item">
-                    <div class="skill-top"><h3>JavaScript</h3><span class="skill-level">Dasar</span></div>
-                    <div class="skill-bar"><span style="width: 40%"></span></div>
-                </li>
-                <li class="skills-info-item">
-                    <div class="skill-top"><h3>Linux</h3><span class="skill-level">Dasar</span></div>
-                    <div class="skill-bar"><span style="width: 45%"></span></div>
-                </li>
-                <li class="skills-info-item">
-                    <div class="skill-top"><h3>Python</h3><span class="skill-level">Dasar</span></div>
-                    <div class="skill-bar"><span style="width: 35%"></span></div>
-                </li>
-                <li class="skills-info-item">
-                    <div class="skill-top"><h3>Kotlin</h3><span class="skill-level">Dasar</span></div>
-                    <div class="skill-bar"><span style="width: 30%"></span></div>
-                </li>
+
+        <section class="stats" aria-label="Statistik singkat">
+            <ul class="stats-row">
+                <li class="stat-cell"><span class="stat-index">01</span><span class="stat-value">04</span><span class="stat-label">Project selesai</span></li>
+                <li class="stat-cell"><span class="stat-index">02</span><span class="stat-value stat-lime">06</span><span class="stat-label">Sertifikat</span></li>
+                <li class="stat-cell"><span class="stat-index">03</span><span class="stat-value">03+</span><span class="stat-label">Tahun belajar</span></li>
+                <li class="stat-cell"><span class="stat-index">04</span><span class="stat-value">01</span><span class="stat-label">Fokus: front-end</span></li>
             </ul>
         </section>
-        <section class="portfolio" id="portfolio">
-            <p class="section-label">02 — Kerja terpilih</p>
-            <h2 class="portfolio-header">Arsip latihan 2024: dari tutorial ke mandiri.</h2>
-            <ol class="portfolio-info">
-                <li class="portfolio-info-item">
-                    <span class="portfolio-index" aria-hidden="true">01</span>
+
+        <section class="about" id="tentang" aria-labelledby="about-title">
+            <header class="section-header">
+                <p class="kicker">01 — TENTANG</p>
+                <h2 id="about-title">DARI KABEL JARINGAN<br>KE ANTARMUKA WEB.</h2>
+                <p class="section-desc">Satu garis waktu, dari sekolah dasar di Bintan Timur sampai kuliah informatika.</p>
+            </header>
+            <div class="about-grid">
+                <figure class="photo-block">
+                    <img src="icons/image2.jpg" alt="Foto Abdul Hafidz" loading="lazy">
+                    <span class="sticker" aria-hidden="true">HTML<br>CSS<br>JS</span>
+                </figure>
+                <div class="about-copy">
+                    <p>Halo, saya Abdul Hafidz — biasa dipanggil Dufi. Lulusan SMK Teknik Komputer dan Jaringan, sekarang menempuh Teknik Informatika di Universitas Maritim Raja Ali Haji.</p>
+                    <p>Ketertarikan mulai dari smartphone di SMP, berlanjut ke Java di SMK, lalu jatuh ke web: HTML, CSS, dan sekarang JavaScript.</p>
+                    <dl class="fact-list">
+                        <div><dt>LOKASI</dt><dd>Bintan Timur, Kepulauan Riau</dd></div>
+                        <div><dt>FOKUS</dt><dd>Front-end — HTML, CSS, JavaScript</dd></div>
+                        <div><dt>PENDIDIKAN</dt><dd>S1 Teknik Informatika, UMRah</dd></div>
+                        <div><dt>STATUS</dt><dd>Terbuka untuk magang &amp; project kecil</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="education" id="edukasi" aria-labelledby="edu-title">
+            <header class="section-header">
+                <p class="kicker">02 — RUTE</p>
+                <h2 id="edu-title">NAIK DARI KELAS SD SAMPAI KAMPUS</h2>
+                <p class="section-desc">Satu garis waktu, dari sekolah dasar di Bintan Timur sampai kuliah informatika.</p>
+            </header>
+            <ol class="timeline">
+                <li class="timeline-card">
+                    <span class="top-rule" aria-hidden="true"></span>
+                    <p class="timeline-top"><span class="t-index">01</span><span class="t-year">2013 — 2018</span></p>
+                    <h3>SDN 009 Bintan Timur</h3>
+                    <p class="t-note">Sekolah dasar di Bintan Timur.</p>
+                </li>
+                <li class="timeline-card">
+                    <span class="top-rule" aria-hidden="true"></span>
+                    <p class="timeline-top"><span class="t-index">02</span><span class="t-year">2018 — 2021</span></p>
+                    <h3>SMPN 3 Bintan Timur</h3>
+                    <p class="t-note">Mulai tertarik teknologi dan smartphone.</p>
+                </li>
+                <li class="timeline-card">
+                    <span class="top-rule" aria-hidden="true"></span>
+                    <p class="timeline-top"><span class="t-index">03</span><span class="t-year">2021 — 2024</span></p>
+                    <h3>SMKN 4 Tanjungpinang — TKJ</h3>
+                    <p class="t-note">Teknik Komputer dan Jaringan. Bahasa pertama: Java.</p>
+                </li>
+                <li class="timeline-card is-now">
+                    <span class="top-rule" aria-hidden="true"></span>
+                    <p class="timeline-top"><span class="t-index">04</span><span class="t-year">2024 — Sekarang</span></p>
+                    <h3>UMRah — Teknik Informatika</h3>
+                    <p class="t-note">Fokus web programming.</p>
+                    <p><span class="pill">SEKARANG</span></p>
+                    <p><a href="https://umrah.ac.id/" target="_blank" rel="noopener noreferrer">umrah.ac.id</a></p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="skills" id="skill" aria-labelledby="skills-title">
+            <header class="section-header">
+                <p class="kicker">03 — KEMAMPUAN</p>
+                <h2 id="skills-title">YANG SAYA PAKAI, JUJUR AJA</h2>
+                <p class="section-desc">Level di bawah jujur: yang sudah dipakai di project, dan yang masih dipelajari.</p>
+            </header>
+            <ul class="skill-grid">
+                <li class="skill-card"><span class="watermark" aria-hidden="true">H</span><h3>HTML</h3><p class="s-level">MENENGAH</p><p class="s-count">3 / 5</p><div class="meter" role="img" aria-label="HTML level 3 dari 5"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></div></li>
+                <li class="skill-card"><span class="watermark" aria-hidden="true">C</span><h3>CSS</h3><p class="s-level">MENENGAH</p><p class="s-count">3 / 5</p><div class="meter" role="img" aria-label="CSS level 3 dari 5"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></div></li>
+                <li class="skill-card"><span class="watermark" aria-hidden="true">J</span><h3>JavaScript</h3><p class="s-level">DASAR</p><p class="s-count">2 / 5</p><div class="meter" role="img" aria-label="JavaScript level 2 dari 5"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></div></li>
+                <li class="skill-card"><span class="watermark" aria-hidden="true">L</span><h3>Linux</h3><p class="s-level">DASAR</p><p class="s-count">2 / 5</p><div class="meter" role="img" aria-label="Linux level 2 dari 5"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></div></li>
+                <li class="skill-card"><span class="watermark" aria-hidden="true">P</span><h3>Python</h3><p class="s-level">DASAR</p><p class="s-count">2 / 5</p><div class="meter" role="img" aria-label="Python level 2 dari 5"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></div></li>
+                <li class="skill-card"><span class="watermark" aria-hidden="true">K</span><h3>Kotlin</h3><p class="s-level">DASAR</p><p class="s-count">1 / 5</p><div class="meter" role="img" aria-label="Kotlin level 1 dari 5"><span class="on"></span><span></span><span></span><span></span><span></span></div></li>
+            </ul>
+        </section>
+
+        <section class="work" id="karya" aria-labelledby="work-title">
+            <header class="section-header">
+                <p class="kicker kicker-orange">04 — KERJA TERPILIH</p>
+                <h2 id="work-title">ARSIP 2024: DARI TUTORIAL KE MANDIRI.</h2>
+                <p class="section-desc">Empat latihan yang selesai, punya halaman demo, dan jadi fondasi portfolio ini.</p>
+            </header>
+            <ol class="work-grid">
+                <li class="project-card">
                     <img src="icons/portfolio-1.png" alt="Website portfolio" loading="lazy">
-                    <div class="portfolio-body">
-                        <p class="portfolio-meta">Mei 2024 · Mandiri · HTML / CSS</p>
+                    <div class="project-body">
+                        <p class="project-meta"><span class="p-index">PROJECT 01</span><span class="p-year">2024</span></p>
                         <h3>Website Portfolio</h3>
-                        <p class="portfolio-info-text">
-                            Project pertama yang selesai setelah materi Codepolitan. Fondasi halaman ini.
-                        </p>
-                        <div class="button-portfolio">
-                            <a href="https://masapis.github.io/website-portfolio/" target="_blank" rel="noopener noreferrer">Lihat demo</a>
-                        </div>
+                        <p class="p-desc">Halaman portofolio pribadi dengan section karya, skill, dan kontak.</p>
+                        <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+                        <a class="p-link" href="https://masapis.github.io/website-portfolio/" target="_blank" rel="noopener noreferrer">Lihat demo →</a>
                     </div>
                 </li>
-                <li class="portfolio-info-item">
-                    <span class="portfolio-index" aria-hidden="true">02</span>
+                <li class="project-card">
                     <img src="icons/portfolio-2.png" alt="Profile card" loading="lazy">
-                    <div class="portfolio-body">
-                        <p class="portfolio-meta">Mei 2024 · Tutorial CodingLab · HTML / CSS</p>
+                    <div class="project-body">
+                        <p class="project-meta"><span class="p-index">PROJECT 02</span><span class="p-year">2024</span></p>
                         <h3>Profile Card</h3>
-                        <p class="portfolio-info-text">
-                            Latihan mengikuti tutorial untuk memahami komponen kartu.
-                        </p>
-                        <div class="button-portfolio">
-                            <a href="https://masapis.github.io/profile-Card-abdul-/" target="_blank" rel="noopener noreferrer">Lihat demo</a>
-                        </div>
+                        <p class="p-desc">Kartu profil singkat yang bisa dibagikan sebagai tautan.</p>
+                        <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+                        <a class="p-link" href="https://masapis.github.io/profile-Card-abdul-/" target="_blank" rel="noopener noreferrer">Lihat demo →</a>
                     </div>
                 </li>
-                <li class="portfolio-info-item">
-                    <span class="portfolio-index" aria-hidden="true">03</span>
-                    <img src="icons/portfolio-3.png" alt="Latihan tiruan halaman login" loading="lazy">
-                    <div class="portfolio-body">
-                        <p class="portfolio-meta">Mei 2024 · Mandiri · HTML / CSS</p>
+                <li class="project-card">
+                    <img src="icons/portfolio-3.png" alt="Tiruan halaman login" loading="lazy">
+                    <div class="project-body">
+                        <p class="project-meta"><span class="p-index">PROJECT 03</span><span class="p-year">2024</span></p>
                         <h3>Tiruan Halaman Login</h3>
-                        <p class="portfolio-info-text">
-                            Latihan layout form tanpa backend, tanpa pengumpulan data.
-                        </p>
-                        <div class="button-portfolio">
-                            <a href="https://masapis.github.io/Clone-loginpage-w3school-2024/" target="_blank" rel="noopener noreferrer">Lihat demo</a>
-                        </div>
+                        <p class="p-desc">Reproduksi tampilan halaman login dengan validasi form sederhana.</p>
+                        <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+                        <a class="p-link" href="https://masapis.github.io/Clone-loginpage-w3school-2024/" target="_blank" rel="noopener noreferrer">Lihat demo →</a>
                     </div>
                 </li>
-                <li class="portfolio-info-item">
-                    <span class="portfolio-index" aria-hidden="true">04</span>
+                <li class="project-card">
                     <img src="icons/portfolio-4.png" alt="Tabel harga internet" loading="lazy">
-                    <div class="portfolio-body">
-                        <p class="portfolio-meta">Agustus 2024 · Mandiri · HTML / CSS</p>
+                    <div class="project-body">
+                        <p class="project-meta"><span class="p-index">PROJECT 04</span><span class="p-year">2024</span></p>
                         <h3>Tabel Harga Internet</h3>
-                        <p class="portfolio-info-text">
-                            Pricing UI saja, tanpa transaksi asli.
-                        </p>
-                        <div class="button-portfolio">
-                            <a href="https://masapis.github.io/myTablePricing/" target="_blank" rel="noopener noreferrer">Lihat demo</a>
-                        </div>
+                        <p class="p-desc">Tabel paket internet dengan filter dan urut data.</p>
+                        <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+                        <a class="p-link" href="https://masapis.github.io/myTablePricing/" target="_blank" rel="noopener noreferrer">Lihat demo →</a>
                     </div>
                 </li>
             </ol>
-            <!-- TODO: tambah "Lihat kode" per item kalau URL repo GitHub tiap project sudah siap -->
         </section>
-        <section class="certificate" id="certificate">
-            <p class="section-label">Bukti</p>
-            <h2 class="certificate-header">Sertifikat — geser ke samping</h2>
-            <div class="certificate-info">
-                <figure class="certificate-info-item">
-                    <img src="icons/certi-alibaba-cloud.png" alt="Sertifikat Alibaba Cloud" loading="lazy">
-                    <figcaption><strong>Alibaba Cloud</strong><span>Cloud</span></figcaption>
-                </figure>
-                <figure class="certificate-info-item">
-                    <img src="icons/certi-codepolitan-html.png" alt="Sertifikat Codepolitan HTML" loading="lazy">
-                    <figcaption><strong>Codepolitan</strong><span>HTML</span></figcaption>
-                </figure>
-                <figure class="certificate-info-item">
-                    <img src="icons/certi-codepolitan-css.jpg" alt="Sertifikat Codepolitan CSS" loading="lazy">
-                    <figcaption><strong>Codepolitan</strong><span>CSS</span></figcaption>
-                </figure>
-                <figure class="certificate-info-item">
-                    <img src="icons/certi-lksitnsa.jpg" alt="Sertifikat lomba LKS IT NSA" loading="lazy">
-                    <figcaption><strong>LKS IT NSA</strong><span>Lomba</span></figcaption>
-                </figure>
-                <figure class="certificate-info-item">
-                    <img src="icons/certi-dicoding.jpg" alt="Sertifikat Dicoding Logika Pemrograman" loading="lazy">
-                    <figcaption><strong>Dicoding</strong><span>Logika</span></figcaption>
-                </figure>
-                <figure class="certificate-info-item">
-                    <img src="icons/certi-duniaCoding.jpg" alt="Sertifikat DuniaCoding Android" loading="lazy">
-                    <figcaption><strong>DuniaCoding</strong><span>Android</span></figcaption>
-                </figure>
-            </div>
+
+        <section class="certificates" id="sertifikat" aria-labelledby="cert-title">
+            <header class="section-header">
+                <p class="kicker">05 — BUKTI</p>
+                <h2 id="cert-title">SERTIFIKAT &amp; PENCAPAIAN</h2>
+                <p class="section-desc">Enam sertifikat dari kursus daring, kompetisi, dan platform belajar mandiri.</p>
+            </header>
+            <ul class="cert-list">
+                <li><span class="c-index">01</span><span class="c-title">Cloud Computing Fundamentals</span><span class="c-issuer">Alibaba Cloud</span><span class="c-tag">CLOUD</span></li>
+                <li><span class="c-index">02</span><span class="c-title">Belajar Dasar HTML</span><span class="c-issuer">Codepolitan</span><span class="c-tag">HTML</span></li>
+                <li><span class="c-index">03</span><span class="c-title">Belajar Dasar CSS</span><span class="c-issuer">Codepolitan</span><span class="c-tag">CSS</span></li>
+                <li><span class="c-index">04</span><span class="c-title">Lomba Kompetensi Siswa — IT Network</span><span class="c-issuer">LKS IT NSA</span><span class="c-tag">LOMBA</span></li>
+                <li><span class="c-index">05</span><span class="c-title">Logika Pemrograman Dasar</span><span class="c-issuer">Dicoding</span><span class="c-tag">LOGIKA</span></li>
+                <li><span class="c-index">06</span><span class="c-title">Android Development</span><span class="c-issuer">DuniaCoding</span><span class="c-tag">ANDROID</span></li>
+            </ul>
         </section>
-        <section class="contact" id="contact">
-            <p class="section-label">Kontak</p>
-            <h2 class="contact-title">Punya project kecil? Kirim pesan.</h2>
-            <div class="contact-info">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <!-- TODO: ganti dengan access key baru dari web3forms.com — key lama terekspos di git history, segera revoke -->
+
+        <section class="contact" id="kontak" aria-labelledby="contact-title">
+            <header class="section-header">
+                <p class="kicker kicker-dark">06 — KONTAK</p>
+                <h2 id="contact-title">PUNYA PROJECT KECIL?<br>MARI BICARA.</h2>
+                <p class="section-desc">Ceritakan kebutuhan, timeline, dan budget. Saya balas dalam 1–2 hari — biasanya lebih cepat.</p>
+            </header>
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <p class="reply-status"><span class="dot" aria-hidden="true"></span>BALASAN 1–2 HARI · BINTAN, WIB</p>
+                    <dl class="contact-list">
+                        <div class="contact-row"><dt>EMAIL</dt><dd><a href="mailto:abdulhafidz3105@gmail.com">abdulhafidz3105@gmail.com</a></dd></div>
+                        <div class="contact-row"><dt>GITHUB</dt><dd><a href="https://github.com/MasApis" target="_blank" rel="noopener noreferrer">github.com/MasApis</a></dd></div>
+                        <div class="contact-row"><dt>TELEPON</dt><dd><a href="tel:+6283146949357">0831 4694 9357</a></dd></div>
+                        <div class="contact-row"><dt>LOKASI</dt><dd>Bintan Timur, Kepulauan Riau</dd></div>
+                    </dl>
+                    <div class="social-chips">
+                        <a href="https://github.com/MasApis" target="_blank" rel="noopener noreferrer">GITHUB</a>
+                        <a href="https://www.instagram.com/masapistech/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+                        <a href="mailto:abdulhafidz3105@gmail.com">EMAIL</a>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <h3 class="form-title">KIRIM PESAN</h3>
                     <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
                     <div class="form-field">
-                        <label for="contact-name">Nama</label>
-                        <input id="contact-name" type="text" name="name" placeholder="Nama kamu" class="contact-inputs" required autocomplete="name">
+                        <label for="contact-name">NAMA</label>
+                        <input id="contact-name" type="text" name="name" placeholder="Nama kamu" required autocomplete="name">
                     </div>
                     <div class="form-field">
-                        <label for="contact-email">Email</label>
-                        <input id="contact-email" type="email" name="email" placeholder="nama@email.com" class="contact-inputs" required autocomplete="email">
+                        <label for="contact-email">EMAIL</label>
+                        <input id="contact-email" type="email" name="email" placeholder="nama@email.com" required autocomplete="email">
                     </div>
                     <div class="form-field">
-                        <label for="contact-message">Pesan</label>
-                        <textarea id="contact-message" name="message" placeholder="Tulis pesan kamu..." required></textarea>
+                        <label for="contact-message">PESAN</label>
+                        <textarea id="contact-message" name="message" placeholder="Kebutuhan, timeline, dan budget…" required></textarea>
                     </div>
-                    <button type="submit" class="submit">Kirim pesan</button>
+                    <button type="submit" class="btn-primary btn-full">KIRIM SEKARANG →</button>
+                    <p class="form-note">Atau email langsung ke abdulhafidz3105@gmail.com</p>
                 </form>
-                <aside class="contact-side" aria-label="Info kontak lain">
-                    <p class="contact-side-status"><span class="status-dot" aria-hidden="true"></span> Balasan 1–2 hari</p>
-                    <ul class="contact-side-list">
-                        <li><span>Lokasi</span>Bintan, Kep. Riau (WIB)</li>
-                        <li><span>Email</span><a href="mailto:abddulhafidz3105@gmail.com">abddulhafidz3105@gmail.com</a></li>
-                        <li><span>GitHub</span><a href="https://github.com/MasApis" target="_blank" rel="noopener noreferrer">github.com/MasApis</a></li>
-                    </ul>
-                    <p class="contact-side-note">Cantumkan: kebutuhan, timeline, dan budget agar saya bisa jawab tepat.</p>
-                </aside>
             </div>
         </section>
+
+        <div class="marquee" aria-hidden="true">
+            <p>MASAPISTECH · MASAPISTECH · MASAPISTECH · MASAPISTECH</p>
+        </div>
     </main>
-    <footer>
-        <div class="footer-info">
-            <div class="about-footer">
-                <h2>MasApisTech</h2>
-                <p>
-                    Junior Web Developer. Fokus belajar web programming — HTML, CSS, dan JavaScript.
-                </p>
-                <ul class="link-sosmed">
-                    <li><a href="https://www.instagram.com/masapistech/" target="_blank" class="link-sosmed-item" rel="noopener noreferrer" aria-label="Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.facebook.com/abdul.hafidz.1460693" target="_blank" class="link-sosmed-item" rel="noopener noreferrer" aria-label="Facebook"><i class="ph ph-facebook-logo" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/abdul-hafidz-198a66304/" target="_blank" class="link-sosmed-item" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a></li>
-                    <li><a href="https://github.com/MasApis" target="_blank" class="link-sosmed-item" rel="noopener noreferrer" aria-label="GitHub"><i class="ph ph-github-logo" aria-hidden="true"></i></a></li>
-                </ul>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <p class="wordmark">masapistech</p>
+                <p class="tagline">Junior web developer. Fokus belajar web programming — HTML, CSS, dan JavaScript.</p>
             </div>
-            <div class="quick-link-footer">
-                <h2>Navigasi</h2>
-                <ul class="quick-link-info">
-                    <li class="quick-link-info-item"><a href="#introduce-header">Home</a></li>
-                    <li class="quick-link-info-item"><a href="#about">About</a></li>
-                    <li class="quick-link-info-item"><a href="#education">Education</a></li>
-                    <li class="quick-link-info-item"><a href="#skills">Skills</a></li>
-                    <li class="quick-link-info-item"><a href="#portfolio">Portfolio</a></li>
-                    <li class="quick-link-info-item"><a href="#certificate">Certificate</a></li>
-                    <li class="quick-link-info-item"><a href="#contact">Contact</a></li>
+            <nav aria-label="Navigasi footer">
+                <p class="footer-head">NAVIGASI</p>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#edukasi">Edukasi</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#karya">Karya</a></li>
+                    <li><a href="#sertifikat">Sertifikat</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
                 </ul>
-            </div>
-            <div class="contact-footer">
-                <h2>Kontak</h2>
-                <div class="contact-footer-item">
-                    <i class="ph ph-map-pin" aria-hidden="true"></i>
-                    <address class="address">Bintan Timur, Kepulauan Riau, Indonesia</address>
-                </div>
-                <div class="contact-footer-item">
-                    <i class="ph ph-envelope" aria-hidden="true"></i>
-                    <span class="email">abddulhafidz3105@gmail.com</span>
-                </div>
-                <div class="contact-footer-item">
-                    <i class="ph ph-phone" aria-hidden="true"></i>
-                    <span class="phone-number">083146949357</span>
-                </div>
+            </nav>
+            <nav aria-label="Karya footer">
+                <p class="footer-head">KARYA</p>
+                <ul>
+                    <li><a href="https://masapis.github.io/website-portfolio/" target="_blank" rel="noopener noreferrer">Website Portfolio</a></li>
+                    <li><a href="https://masapis.github.io/profile-Card-abdul-/" target="_blank" rel="noopener noreferrer">Profile Card</a></li>
+                    <li><a href="https://masapis.github.io/Clone-loginpage-w3school-2024/" target="_blank" rel="noopener noreferrer">Tiruan Halaman Login</a></li>
+                    <li><a href="https://masapis.github.io/myTablePricing/" target="_blank" rel="noopener noreferrer">Tabel Harga Internet</a></li>
+                </ul>
+            </nav>
+            <div>
+                <p class="footer-head">KONTAK</p>
+                <ul>
+                    <li><a href="mailto:abdulhafidz3105@gmail.com">abdulhafidz3105@gmail.com</a></li>
+                    <li><a href="https://github.com/MasApis" target="_blank" rel="noopener noreferrer">github.com/MasApis</a></li>
+                    <li><a href="tel:+6283146949357">0831 4694 9357</a></li>
+                    <li>Bintan Timur, Kep. Riau</li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© <span id="year">2026</span> MasApisTech. All rights reserved.</p>
+            <p>© <span id="year">2026</span> MasApisTech. Seluruh hak cipta dilindungi.</p>
+            <p>Dibangun dengan HTML, CSS &amp; JavaScript</p>
+            <a href="#home" class="back-top">KEMBALI KE ATAS ↑</a>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
