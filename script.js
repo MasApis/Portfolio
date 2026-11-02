@@ -1,4 +1,5 @@
 const menuBtn = document.getElementById("menu-btn");
+const menuClose = document.getElementById("menu-close");
 const mobileMenu = document.getElementById("mobile-menu");
 const backdrop = document.getElementById("menu-backdrop");
 
@@ -15,6 +16,11 @@ function setMenu(open) {
 
 menuBtn.addEventListener("click", () => {
     setMenu(!mobileMenu.classList.contains("open"));
+});
+
+menuClose.addEventListener("click", () => {
+    setMenu(false);
+    menuBtn.focus();
 });
 
 backdrop.addEventListener("click", () => setMenu(false));
