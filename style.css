@@ -389,37 +389,49 @@ a { color: inherit; }
 .education { padding: 96px var(--pad-x); max-width: var(--max-w); margin: 0 auto; }
 /* Zigzag timeline (Opsi B) */
 .zigzag {
-    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-}
-.zigzag::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 60px;
-    bottom: 60px;
-    width: 4px;
-    transform: translateX(-50%);
-    background: var(--v2-line);
+    gap: 28px;
 }
 .z-row {
     display: grid;
-    grid-template-columns: 1fr 160px 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr) minmax(0, 1fr);
     align-items: stretch;
 }
-.z-left .timeline-card { justify-self: start; }
-.z-right .timeline-card { justify-self: end; }
-.z-row .timeline-card { width: 100%; max-width: 440px; margin-bottom: 0; }
+.z-row .timeline-card { margin-bottom: 0; }
 .z-mid {
     position: relative;
+    align-self: stretch;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.rope { width: 100%; max-width: 160px; height: 14px; overflow: visible; }
-.rope.flip { transform: scaleX(-1); }
+/* Spine: exact from first dot to last dot, continuous through the gaps */
+.z-mid::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -14px;
+    bottom: -14px;
+    width: 4px;
+    transform: translateX(-50%);
+    background: var(--v2-line);
+}
+.z-row:first-child .z-mid::before { top: 50%; }
+.z-row:last-child .z-mid::before { bottom: 50%; }
+/* Rope: card edge to milestone, never past the dot */
+.rope {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 24px;
+    transform: translateY(-50%);
+    overflow: visible;
+    z-index: 1;
+}
+.z-left .rope { right: 50%; }
+.z-right .rope { left: 50%; }
+.z-right .rope.flip { transform: translateY(-50%) scaleX(-1); }
 .rope-main { stroke: var(--v2-line); stroke-width: 3; }
 .rope-hi { stroke: var(--v2-muted); stroke-width: 1; transform: translateY(-3px); }
 .knot { stroke: var(--v2-orange); stroke-width: 2; }
@@ -432,6 +444,7 @@ a { color: inherit; }
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background: var(--v2-orange);
+    z-index: 2;
 }
 .z-dot.z-now { background: var(--v2-lime); }
 .timeline-card {
