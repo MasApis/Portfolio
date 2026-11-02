@@ -337,7 +337,7 @@ a { color: inherit; }
     gap: 6px;
 }
 .stat-cell:last-child { border-right: 0; }
-.stat-index { font-size: 12px; color: var(--v2-muted); }
+.stat-index { font-size: 12px; font-weight: 700; letter-spacing: 1.4px; color: var(--v2-orange); }
 .stat-value { font-family: var(--font-display); font-size: 44px; line-height: 1; }
 .stat-lime { color: var(--v2-lime); }
 .stat-label { font-size: 12px; color: var(--v2-muted); }
@@ -382,7 +382,7 @@ a { color: inherit; }
     padding: 14px 0;
     border-bottom: 1px solid #d8d2c4;
 }
-.fact-list dt { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; }
+.fact-list dt { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; color: var(--v2-orange); }
 .fact-list dd { font-size: 14px; }
 
 /* Education */
@@ -464,7 +464,7 @@ a { color: inherit; }
 .project-body { padding: 22px 24px 26px; }
 .project-meta { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 1.4px; margin-bottom: 12px; }
 .p-index { color: var(--v2-orange); font-weight: 700; }
-.p-year { color: var(--v2-muted-dark); }
+.p-year { color: #8a8a90; }
 .project-body h3 { font-family: var(--font-display); font-size: 26px; font-weight: 400; line-height: 1.1; margin-bottom: 8px; }
 .p-desc { font-size: 12px; color: var(--v2-muted-dark); margin-bottom: 12px; }
 .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
@@ -541,6 +541,10 @@ a { color: inherit; }
     padding: 12px 14px;
 }
 .form-field textarea { min-height: 120px; resize: vertical; }
+.form-field input::placeholder, .form-field textarea::placeholder {
+    color: #6e6e78;
+    opacity: 1;
+}
 .form-note { margin-top: 14px; font-size: 12px; color: var(--v2-muted); }
 
 /* Marquee */
